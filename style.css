@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    list-style-type: none
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    width: 100vh;
+    min-height: 100vh;
+    background-color: #0B0D17;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Bellefair', serif;
+}
+
+h5,nav,p {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/home/background-home-desktop.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*-- nav bar start --*/
+.nav-bar {
+    top: 2.5rem;
+    position: relative;
+    display: flex;
+    width: 95%;
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.menu {
+    position: absolute;
+    right: 2rem;
+    transform: scale(0);
+    cursor: pointer;
+}
+
+.logo {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.line {
+   position: absolute;
+   height: 1px;
+   width: 29vw;
+   left: 10vw;
+   background-color: #979797;
+   z-index: 99;
+}
+
+.nav-bar ul {
+    width: 60%;
+    padding: 0 2vw 0 1vw;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.049);
+    backdrop-filter: blur(9.5px);
+    color: azure;
+}
+
+.nav-bar ul li {
+    margin: 0 1.1rem 0 1.5rem;
+    letter-spacing: 1.5px;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav-bar ul a:active .lis {
+    box-shadow: 0 5px #ffffff;
+}
+
+.nav-bar ul li:hover {
+    box-shadow: 0 2px #D0D6F9;
+}
+
+.num {
+    margin-right: 0.3rem;
+}
+
+/*-- nav bar end --*/
+.main {
+    position: absolute;
+    bottom: 6rem;
+    height: 50%;
+    width: 105%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.intro {
+    width: 27%;
+    height: 100%;
+    padding: 4rem 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.intro h1,h5,p {
+    color: azure;
+}
+
+.intro h1 {
+    font-size: 5rem;
+}
+
+.intro h5 {
+    font-size: 1.2rem;
+}
+
+.intro p {
+
+}
+
+.btn {
+    background-color: azure;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:#0B0D17;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 3vw #979797;
+}
+
+
+
+/* for tablets */
+@media screen and (max-width: 768px){
+    .line {
+        transform: scale(0);
+    }
+    .logo {
+        transform: scale(0.8);
+    }
+    .nav-bar {
+        top: 0;
+    }
+    .nav-bar ul {
+        width: 70%;
+    }
+    .nav-bar ul li {
+        font-size: 0.8rem;
+        margin: 0 1.5vw 0 0.5vw;
+    }
+    .main {
+        width: 60%;
+        height: 80%;
+        bottom: 1rem;
+        align-items: flex-start;
+    }
+    .intro{
+        padding: 1rem 0;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        text-align: center;
+    }
+    .intro h1 {
+        margin: -1.3rem 0 0 0;
+    }
+    .intro h5 {
+        font-size: 0.8rem;
+    }
+    .intro p {
+        font-size: 0.8rem;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width: 480px) {
+    .logo {
+        transform: scale(0.8);
+    }
+
+    .menu {
+        z-index: 99;
+        transform: scale(0.8);
+    }
+
+    .nav-bar ul {
+        position: fixed;
+        right: 0;
+        transform: translateX(100%);
+        flex-direction: column;
+        min-height: 200vh;
+        z-index: 98;
+        padding: 18rem 0 0 0;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    .nav-bar ul.show {
+        transform: translateX(0);
+    }
+
+    .nav-bar ul li {
+        height: 2rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+        width: 96%;
+    }
+
+    .nav-bar ul li:hover {
+        box-shadow: 2vw 0 #D0D6F9;
+    }
+}
