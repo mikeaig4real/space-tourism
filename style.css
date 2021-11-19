@@ -168,6 +168,10 @@ h5,nav,p {
 
 /* for tablets */
 @media screen and (max-width: 768px){
+    .container {
+        background-image:url('./assets/home/background-home-tablet.jpg');
+    }
+    
     .line {
         transform: scale(0);
     }
@@ -210,6 +214,10 @@ h5,nav,p {
 
 /* for mobile */
 @media screen and (max-width: 480px) {
+    .container {
+        background-image:url('./assets/home/background-home-mobile.jpg');
+    }
+    
     .logo {
         transform: scale(0.8);
     }
