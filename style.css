@@ -193,7 +193,7 @@ h5,nav,p {
     }
     .main {
         width: 60%;
-        height: 80%;
+        height: 85%;
         bottom: 1rem;
         align-items: flex-start;
     }
@@ -223,6 +223,10 @@ h5,nav,p {
     
     .logo {
         transform: scale(0.8);
+    }
+  
+  .intro h1 {
+        margin: 0 0 0 0;
     }
 
     .menu {
