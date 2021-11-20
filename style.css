@@ -213,7 +213,7 @@ h5,nav,p {
 }
 
 /* for mobile */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 520px) {
     .container {
         background-image:url('./assets/home/background-home-mobile.jpg');
     }
