@@ -81,7 +81,7 @@ h5,nav,p {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.049);
-    backdrop-filter: blur(9.5px);
+    backdrop-filter: blur(11.5px);
     color: azure;
 }
 
