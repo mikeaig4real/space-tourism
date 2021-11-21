@@ -54,6 +54,7 @@ h5,nav,p {
     background-repeat: no-repeat;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .container.home {
@@ -343,7 +344,7 @@ h5,nav,p {
 
 
 /* for tablets */
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
     .container.home {
         background-image:url('./assets/home/background-home-tablet.jpg');
     }
@@ -461,7 +462,7 @@ h5,nav,p {
 }
 
 /* for mobile */
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
     .container.home {
         background-image:url('./assets/home/background-home-mobile.jpg');
     }
