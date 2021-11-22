@@ -551,6 +551,9 @@ h5,nav,p {
         font-size: 1rem;
         height: 40%;
         width: 150%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .pos {
