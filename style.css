@@ -181,6 +181,7 @@ h5,nav,p {
 }
 
 .display h3 {
+    width: max-content;
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 100;
@@ -271,7 +272,7 @@ h5,nav,p {
 }
 
 .pos {
-    width: 100%;
+    width: 130%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -298,6 +299,7 @@ h5,nav,p {
 .time h4, .dis h4 {
     font-weight: 100;
     font-size: 1.5rem;
+    width: max-content;
 }
 
 .intro {
@@ -363,9 +365,10 @@ h5,nav,p {
 
     .container.destination .main {
         height: 70%;
-        width: 54%;
+        width: 50%;
         transform: translateX(0);
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .display {
@@ -384,13 +387,13 @@ h5,nav,p {
 
     .display h3 {
         position: absolute;
-        left: -7rem;
+        left: -27vw;
         top: -1rem;
         font-size: 1rem;
     }
     
     .info {
-        height: 50%;
+        height: 55%;
         width: 100%;
         padding: 0;
         align-items: center;
@@ -403,17 +406,21 @@ h5,nav,p {
     }
 
     .info nav ul {
-        width: 50%;
+        width: 70%;
         font-size: 1rem;
     }
 
     .para {
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        width: 150%;
+        height: max-content;
+        padding-bottom: 1rem;
     }
 
     .pos > div {
         text-align: center;
+        align-items: center;
     }
 
     .line {
@@ -426,7 +433,7 @@ h5,nav,p {
         top: 0;
     }
     .nav-bar ul {
-        width: 70%;
+        width: max-content;
     }
     .nav-bar ul li {
         font-size: 1rem;
@@ -462,7 +469,7 @@ h5,nav,p {
 }
 
 /* for mobile */
-@media (max-width: 520px) {
+@media (max-width: 420px) {
     .container.home {
         background-image:url('./assets/home/background-home-mobile.jpg');
     }
@@ -503,21 +510,23 @@ h5,nav,p {
     .container.destination .main {
         justify-content: space-around;
         bottom: 1rem;
-        width: 54%;
+        height: 80%;
+        width: 50%;
     }
 
     .display {
         min-height:30%;
-        width: 70%;
+        width: 65%;
         justify-content: flex-start;
     }
 
     .display h3 {
         font-size: 0.8rem;
+        width: max-content;
     }
 
     .info {
-        height: 60%;
+        height: 70%;
     }
 
     .info nav {
@@ -525,12 +534,13 @@ h5,nav,p {
     }
 
     .info nav ul {
-        width: 75%;
+        width: 95%;
         font-size: 0.8rem;
     }
 
     .info nav li {
         margin: 0;
+        font-size: 1rem;
     }
 
     .info h1 {
@@ -538,18 +548,20 @@ h5,nav,p {
     }
 
     .para {
-        font-size: 0.8rem;
-        height: 45%;
+        font-size: 1rem;
+        height: 40%;
+        width: 150%;
     }
 
     .pos {
         flex-direction: column;
-        height: 50%;
+        height: 20%;
         justify-content: space-between;
     }
 
     .dis, .time {
-        height: 45%;
+        height: 25%;
+        width: max-content;
     }
 
     .dis h5 ,.time h5 {
@@ -565,7 +577,12 @@ h5,nav,p {
     }
 
     .slides {
+        width: 100%;
         height: 65%;
+    }
+
+    .nav-bar ul {
+        width: 60%;
     }
 
     .nav-bar ul.show {
