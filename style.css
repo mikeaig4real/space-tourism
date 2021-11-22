@@ -516,7 +516,7 @@ h5,nav,p {
 
     .display {
         min-height:30%;
-        width: 65%;
+        width: 75%;
         justify-content: flex-start;
     }
 
@@ -526,7 +526,7 @@ h5,nav,p {
     }
 
     .info {
-        height: 70%;
+        height: 50%;
         justify-content: space-around;
     }
 
