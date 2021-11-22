@@ -372,32 +372,33 @@ h5,nav,p {
     }
 
     .display {
-        min-width: 60%;
-        min-height: 35%;
-        justify-content: flex-end;
+        min-width: 70%;
+        min-height: 60%;
     }
 
     .slides {
+        display: flex;
+        justify-content: center;
         border-radius: 0;
         align-self: center;
+        transform: translateY(5%);
         width: 84%;
-        min-height: 100%;
-        padding-top: 1rem;
+        min-height: 90%;
     }
 
     .display h3 {
         position: absolute;
-        left: -27vw;
+        left: -20vw;
         top: -1rem;
         font-size: 1rem;
     }
     
     .info {
-        height: 55%;
+        height: 75%;
         width: 100%;
         padding: 0;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .info nav {
@@ -515,13 +516,21 @@ h5,nav,p {
     }
 
     .display {
-        min-height:30%;
-        width: 80%;
-        justify-content: flex-start;
+        min-height:40%;
+        width: 30%;
+        justify-content: flex-end;
+    }
+
+    .slides {
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-top:1vh ;
     }
 
     .display h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        text-align: center;
+        min-width: 100%;
         width: max-content;
     }
 
