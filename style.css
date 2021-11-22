@@ -186,7 +186,7 @@ h5,nav,p {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 0.2vw;
-    color: rgb(194, 194, 194);
+    color: azure;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -201,7 +201,7 @@ h5,nav,p {
     overflow: hidden;
     align-self: flex-end;
     border-radius: 50%;
-   
+    display: flex;
 }
 
 .slide-con {
@@ -213,6 +213,9 @@ h5,nav,p {
 .slide {
     min-width: 100%;
     min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .info {
@@ -227,7 +230,7 @@ h5,nav,p {
 }
 
 .info nav {
-    height: 10%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -257,7 +260,7 @@ h5,nav,p {
 
 
 .info li:hover {
-    border-bottom:2px solid #979797 ;
+    border-bottom:5px solid #979797 ;
     transform: translateY(1px);
 }
 
@@ -364,7 +367,7 @@ h5,nav,p {
     }
 
     .container.destination .main {
-        height: 70%;
+        height: 80%;
         width: 50%;
         transform: translateX(0);
         flex-direction: column;
@@ -372,8 +375,8 @@ h5,nav,p {
     }
 
     .display {
-        min-width: 70%;
-        min-height: 60%;
+        min-width: 90%;
+        min-height: 50%;
     }
 
     .slides {
@@ -381,16 +384,16 @@ h5,nav,p {
         justify-content: center;
         border-radius: 0;
         align-self: center;
-        transform: translateY(5%);
-        width: 84%;
-        min-height: 90%;
+        width: 100%;
+        min-height: 100%;
     }
 
     .display h3 {
         position: absolute;
         left: -20vw;
         top: -1rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 5px;
     }
     
     .info {
@@ -407,21 +410,36 @@ h5,nav,p {
     }
 
     .info nav ul {
-        width: 70%;
-        font-size: 1rem;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .info h1 {
+        font-size: 6rem;
+        width: 100%;
+        text-align: center;
     }
 
     .para {
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
         width: 150%;
         height: max-content;
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
     }
 
     .pos > div {
         text-align: center;
         align-items: center;
+    }
+
+    .time h5, .dis h5 {
+        font-size: 1rem;
+        color: #a5a5a5;
+    }
+
+    .time h4, .dis h4 {
+        font-size: 2rem;
     }
 
     .line {
@@ -509,16 +527,16 @@ h5,nav,p {
     }
 
     .container.destination .main {
-        justify-content: space-around;
+        justify-content: flex-start;
         bottom: 1rem;
-        height: 80%;
+        height: 85%;
         width: 50%;
     }
 
     .display {
-        min-height:40%;
-        width: 30%;
+        min-height:30%;
         justify-content: flex-end;
+        margin-bottom: 1rem;
     }
 
     .slides {
@@ -535,40 +553,43 @@ h5,nav,p {
     }
 
     .info {
-        height: 50%;
+        height: 65%;
         justify-content: space-around;
     }
 
     .info nav {
         justify-content: center;
+        width: 130%;
+        margin-bottom: 1rem;
     }
 
     .info nav ul {
-        width: 95%;
-        font-size: 0.8rem;
+        width: 100%;
     }
 
     .info nav li {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .info h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .para {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
+        font-weight: 100;
         height: 40%;
-        width: 150%;
+        width: 170%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1rem;
     }
 
     .pos {
         flex-direction: column;
-        height: 20%;
+        height: 30%;
         justify-content: space-between;
     }
 
@@ -578,11 +599,11 @@ h5,nav,p {
     }
 
     .dis h5 ,.time h5 {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .dis h4 ,.time h4 {
-        font-size: 0.9rem;
+        font-size: 2rem;
     }
 
     .display h3 {
