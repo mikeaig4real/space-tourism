@@ -478,10 +478,10 @@ h5,nav,p {
         margin: 0 0 0 0;
     }
     .intro h5 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .intro p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .btn {
         margin-top: 1rem;
@@ -626,18 +626,19 @@ h5,nav,p {
 
     .nav-bar ul li {
         height: 2.5rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 0.5rem;
-        width: 98%;
+        width: 90%;
+        border:none;
+        border-right: 3px solid transparent;
     }
 
     .nav-bar ul li.clicked {
-        box-shadow: 1vw 0 azure;
+        border-right: 3px solid azure;
     }
 
     .nav-bar ul li:hover {
-        box-shadow: 1vw 0 #d0d6f98a;
         border: none;
-        transform: translateY(0);
+        border-right: 3px solid rgba(250, 250, 250, 0.549);
     }
 }
