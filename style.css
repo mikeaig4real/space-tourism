@@ -627,7 +627,7 @@ h5,nav,p {
     .nav-bar ul li {
         height: 2.5rem;
         font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         width: 90%;
         border:none;
         border-right: 3px solid transparent;
