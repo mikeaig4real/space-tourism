@@ -230,6 +230,10 @@ h5,nav,p {
     color: azure;
 }
 
+.info h1 {
+    text-transform: uppercase;
+}
+
 .info nav {
     height: 15%;
     display: flex;
