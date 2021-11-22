@@ -4,6 +4,11 @@ const navUl = document.querySelector('.nav-bar ul');
 const conDom = document.querySelectorAll('.container');
 const desDom = document.querySelector('.slide-con');
 const desUl = document.querySelector('.info nav ul');
+const desBig = document.querySelector('body > div > div.container.destination > main > section.info > h1');
+const desText = document.querySelector("body > div > div.container.destination > main > section.info > div.para > p");
+const desDis = document.querySelector("body > div > div.container.destination > main > section.info > div.pos > div.dis > h4");
+const desTime = document.querySelector("body > div > div.container.destination > main > section.info > div.pos > div.time > h4");
+
 
 
 
@@ -12,11 +17,12 @@ const desUl = document.querySelector('.info nav ul');
 
 //data
 class Data {
-    
-
+    static async getData() {
+        const data = await fetch('data.json');
+        const dataJson = await data.json();
+        UI.allUI(dataJson);
+    }
 }
-
-
 
 
 
@@ -25,7 +31,9 @@ class Data {
 
 // UI
 class UI {
-    static showMenu() {
+    static allUI(data) {
+        const { destinations, crew, technology } = data;
+        console.log(destinations)
         menu.addEventListener('click', (e) => {
             const oSrc = e.target.src;
             let nSrc = oSrc.slice(0, oSrc.indexOf('/icon') + 5) + '-close.svg';
@@ -58,7 +66,7 @@ class UI {
             }
             conDom.forEach((con) => {
                 con.style.transform = `translateX(-${index}00%)`;
-            })
+            });
         })
         desUl.addEventListener('click', (e) => {
             let index;
@@ -80,6 +88,10 @@ class UI {
                 default:
                     break;
             }
+            desBig.innerText = destinations[index].name;
+            desText.innerText = destinations[index].description;
+            desDis.innerText = destinations[index].distance;
+            desTime.innerText = destinations[index].travel;
             desDom.style.transform = `translateX(-${index}00%)`;
         })
     };
@@ -92,7 +104,7 @@ class UI {
 
 // on-load
 document.addEventListener('DOMContentLoaded', () => {
-    UI.showMenu();
+    Data.getData();
 });
 
 
