@@ -527,6 +527,7 @@ h5,nav,p {
 
     .info {
         height: 70%;
+        justify-content: space-around;
     }
 
     .info nav {
