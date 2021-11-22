@@ -268,7 +268,7 @@ h5,nav,p {
 .para {
     font-size: 0.9rem;
     height: 30%;
-    border-bottom: 0.5px solid #979797;
+    border-bottom: 0.1px solid rgba(150, 150, 150, 0.261);
 }
 
 .pos {
