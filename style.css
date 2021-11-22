@@ -186,7 +186,7 @@ h5,nav,p {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 0.2vw;
-    color: #D0D6F9;
+    color: rgb(194, 194, 194);
     font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -558,7 +558,7 @@ h5,nav,p {
     }
 
     .para {
-        font-size: 1rem;
+        font-size: 0.95rem;
         height: 40%;
         width: 150%;
         display: flex;
