@@ -469,7 +469,7 @@ h5,nav,p {
 }
 
 /* for mobile */
-@media (max-width: 420px) {
+@media (max-width: 520px) {
     .container.home {
         background-image:url('./assets/home/background-home-mobile.jpg');
     }
