@@ -8,6 +8,11 @@ const desBig = document.querySelector('body > div > div.container.destination > 
 const desText = document.querySelector("body > div > div.container.destination > main > section.info > div.para > p");
 const desDis = document.querySelector("body > div > div.container.destination > main > section.info > div.pos > div.dis > h4");
 const desTime = document.querySelector("body > div > div.container.destination > main > section.info > div.pos > div.time > h4");
+let crewId = 0;
+const crewBig = document.querySelector('.crew-con');
+const crewRole = document.querySelector("body > div > div.container.crew > main > section.crew-info > h5");
+const crewBio = document.querySelector("body > div > div.container.crew > main > section.crew-info > p");
+const crewName = document.querySelector("body > div > div.container.crew > main > section.crew-info > h4");
 
 
 
@@ -33,7 +38,7 @@ class Data {
 class UI {
     static allUI(data) {
         const { destinations, crew, technology } = data;
-        console.log(destinations)
+        console.log(crew);
         menu.addEventListener('click', (e) => {
             const oSrc = e.target.src;
             let nSrc = oSrc.slice(0, oSrc.indexOf('/icon') + 5) + '-close.svg';
@@ -93,7 +98,19 @@ class UI {
             desDis.innerText = destinations[index].distance;
             desTime.innerText = destinations[index].travel;
             desDom.style.transform = `translateX(-${index}00%)`;
-        })
+        });
+        const changeCrew = setInterval(() => {
+            if (crewId > crew.length - 1) {
+                crewId = 0;
+            }
+            console.log(crewId);
+            crewBig.style.transform = `translateX(-${crewId}00%)`;
+            crewBio.innerText = crew[crewId].bio;
+            crewName.innerText = crew[crewId].name;
+            crewRole.innerText = crew[crewId].role;
+            crewId++;
+            return () => clearInterval(changeCrew);
+        }, 6000);
     };
 }
 
