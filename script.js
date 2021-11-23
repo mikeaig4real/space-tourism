@@ -73,6 +73,15 @@ class UI {
             conDom.forEach((con) => {
                 con.style.transform = `translateX(-${index}00%)`;
             });
+            const oSrc = menu.src;
+            console.log(oSrc);
+            let nSrc = oSrc.slice(0, oSrc.indexOf('/icon') + 5) + '-close.svg';
+            if (oSrc.includes('hamburger')) {
+                menu.src = nSrc;
+            } else {
+                menu.src = oSrc.slice(0, oSrc.indexOf('/icon') + 5) + '-hamburger.svg';
+            }
+            navUl.classList.toggle('show');
         })
         desUl.addEventListener('click', (e) => {
             let index;
@@ -144,6 +153,7 @@ class UI {
             crewBio.innerText = crew[crewId].bio;
             crewName.innerText = crew[crewId].name;
             crewRole.innerText = crew[crewId].role;
+            const time = crew[crewId].bio.split(' ').length;
             crewId++;
             return () => clearInterval(changeCrew);
         }, 6000);
