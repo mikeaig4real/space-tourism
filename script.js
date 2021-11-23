@@ -13,6 +13,7 @@ const crewBig = document.querySelector('.crew-con');
 const crewRole = document.querySelector("body > div > div.container.crew > main > section.crew-info > h5");
 const crewBio = document.querySelector("body > div > div.container.crew > main > section.crew-info > p");
 const crewName = document.querySelector("body > div > div.container.crew > main > section.crew-info > h4");
+const crewUl = document.querySelector("body > div > div.container.crew > main > section.crew-info > ul");
 
 
 
@@ -99,11 +100,46 @@ class UI {
             desTime.innerText = destinations[index].travel;
             desDom.style.transform = `translateX(-${index}00%)`;
         });
+
+        desUl.addEventListener('click', (e) => {
+            let index;
+            let item = e.target.innerText.toLowerCase();
+            console.log(item)
+            switch (item) {
+                case 'moon':
+                    index = 0;
+                    break;
+                case 'mars':
+                    index = 1;
+                    break;
+                case 'europa':
+                    index = 2;
+                    break;
+                case 'titan':
+                    index = 3;
+                    break;
+                default:
+                    break;
+            }
+            desBig.innerText = destinations[index].name;
+            desText.innerText = destinations[index].description;
+            desDis.innerText = destinations[index].distance;
+            desTime.innerText = destinations[index].travel;
+            desDom.style.transform = `translateX(-${index}00%)`;
+        });
+
+        crewUl.addEventListener('click', (e) => {
+            let item = +e.target.dataset.id;
+            crewId = item;
+            crewBig.style.transform = `translateX(-${crewId}00%)`;
+            crewBio.innerText = crew[crewId].bio;
+            crewName.innerText = crew[crewId].name;
+            crewRole.innerText = crew[crewId].role;
+        });
         const changeCrew = setInterval(() => {
             if (crewId > crew.length - 1) {
                 crewId = 0;
             }
-            console.log(crewId);
             crewBig.style.transform = `translateX(-${crewId}00%)`;
             crewBio.innerText = crew[crewId].bio;
             crewName.innerText = crew[crewId].name;
